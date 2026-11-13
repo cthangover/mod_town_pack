@@ -43,13 +43,13 @@ Town Pack 属于两个游戏的合集，会随它们一起加载。仅安装它�
 
 ## 在你的游戏中使用这些背景
 
-1. 把 `town_pack>=1` 加入内容模组的 `depends` 列表。
-2. 把 `town_pack>=1` 加入游戏的合集，就像 My Novel 模板在 **Assets** 块中做的那样。
+1. 把 `town_pack>=0.1.0` 加入内容模组的 `depends` 列表。
+2. 把 `town_pack>=0.1.0` 加入游戏的合集，就像 My Novel 模板在 **Assets** 块中做的那样。
 3. 按下文的名称引用资源。名称相对于 `backgrounds/` 和 `sounds/`，不带扩展名。
 
 ```jsonc
 // mods/my_game/manifest.json — 添加到已有列表
-"depends": ["town_pack>=1"]
+"depends": ["town_pack>=0.1.0"]
 ```
 
 下面这段取自模板的 `my_novel_bar` 场景，展示酒吧并播放环境音：
@@ -80,7 +80,7 @@ bar/bar_ambient     sounds/bar/bar_ambient.ogg
 
 ## 为你的游戏替换图片
 
-想替换图片又不想改动 Town Pack，可以在自己的模组里放一个相对名称相同的文件（例如 `backgrounds/bar/bar.png`），并在 `depends` 里声明 `town_pack>=1`。依赖所有者的模组后加载、优先生效。替换背景时，还要附带一个同名的 `_depth` 文件：否则游戏仍会找到 Town Pack 原来的深度图，光照就会按旧图的构图分布。
+想替换图片又不想改动 Town Pack，可以在自己的模组里放一个相对名称相同的文件（例如 `backgrounds/bar/bar.png`），并在 `depends` 里声明 `town_pack>=0.1.0`。依赖所有者的模组后加载、优先生效。替换背景时，还要附带一个同名的 `_depth` 文件：否则游戏仍会找到 Town Pack 原来的深度图，光照就会按旧图的构图分布。
 
 没有依赖声明时，两个提供同名资源的模组加载顺序不确定；资源图谱工具会把这种情况报为错误。
 
