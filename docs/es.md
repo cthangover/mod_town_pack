@@ -43,13 +43,13 @@ Town Pack forma parte de las colecciones de ambos juegos y se carga con ellos. I
 
 ## Usa los fondos en tu juego
 
-1. Añade `town_pack>=1` a la lista `depends` de tu mod de contenido.
-2. Añade `town_pack>=1` a la colección de tu juego, como hace la plantilla My Novel en su bloque **Assets**.
+1. Añade `town_pack>=0.1.0` a la lista `depends` de tu mod de contenido.
+2. Añade `town_pack>=0.1.0` a la colección de tu juego, como hace la plantilla My Novel en su bloque **Assets**.
 3. Refiérete a los recursos por su nombre. Los nombres son relativos a `backgrounds/` y `sounds/` y no llevan extensión.
 
 ```jsonc
 // mods/my_game/manifest.json — añádelo a la lista existente
-"depends": ["town_pack>=1"]
+"depends": ["town_pack>=0.1.0"]
 ```
 
 Una escena que muestra el bar y reproduce su ambiente, tomada de la escena `my_novel_bar` de la plantilla:
@@ -80,7 +80,7 @@ bar/bar_ambient     sounds/bar/bar_ambient.ogg
 
 ## Cambia una imagen para tu juego
 
-Para cambiar una imagen sin tocar Town Pack, incluye en tu propio mod un archivo con el mismo nombre relativo, por ejemplo `backgrounds/bar/bar.png`, y declara `town_pack>=1` en su `depends`. El mod que depende del propietario se carga después y gana. Si sustituyes un fondo, incluye también su archivo `_depth` con el mismo nombre: si no, el juego seguirá encontrando la imagen de profundidad original de Town Pack y las luces seguirán la composición de la imagen antigua.
+Para cambiar una imagen sin tocar Town Pack, incluye en tu propio mod un archivo con el mismo nombre relativo, por ejemplo `backgrounds/bar/bar.png`, y declara `town_pack>=0.1.0` en su `depends`. El mod que depende del propietario se carga después y gana. Si sustituyes un fondo, incluye también su archivo `_depth` con el mismo nombre: si no, el juego seguirá encontrando la imagen de profundidad original de Town Pack y las luces seguirán la composición de la imagen antigua.
 
 Sin la dependencia, dos mods que ofrezcan el mismo nombre no tienen un orden definido; la herramienta de mapa de recursos lo informa como error.
 

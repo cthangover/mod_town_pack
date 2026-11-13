@@ -43,13 +43,13 @@ Town Pack is part of both games' collections, so it is loaded with them. Install
 
 ## Use the backgrounds in your game
 
-1. Add `town_pack>=1` to your content mod's `depends` list.
-2. Add `town_pack>=1` to your game's collection, as the My Novel template does in its **Assets** block.
+1. Add `town_pack>=0.1.0` to your content mod's `depends` list.
+2. Add `town_pack>=0.1.0` to your game's collection, as the My Novel template does in its **Assets** block.
 3. Refer to the resources by their names below. Names are relative to `backgrounds/` and `sounds/` and have no file extension.
 
 ```jsonc
 // mods/my_game/manifest.json — add to the existing list
-"depends": ["town_pack>=1"]
+"depends": ["town_pack>=0.1.0"]
 ```
 
 A scene that shows the bar and plays its ambience, taken from the template's `my_novel_bar` scene:
@@ -80,7 +80,7 @@ bar/bar_ambient     sounds/bar/bar_ambient.ogg
 
 ## Replace a picture for your game
 
-To change a picture without editing Town Pack, ship a file with the same relative name, for example `backgrounds/bar/bar.png`, in your own mod and declare `town_pack>=1` in its `depends`. The mod that depends on the owner is loaded later and wins. If you replace a background, also ship a matching `_depth` file with the same name: otherwise Town Pack's original depth picture is still found, and lights follow the old picture's layout.
+To change a picture without editing Town Pack, ship a file with the same relative name, for example `backgrounds/bar/bar.png`, in your own mod and declare `town_pack>=0.1.0` in its `depends`. The mod that depends on the owner is loaded later and wins. If you replace a background, also ship a matching `_depth` file with the same name: otherwise Town Pack's original depth picture is still found, and lights follow the old picture's layout.
 
 Without the dependency, two mods offering the same name have no defined order; the resource map tool reports that as an error.
 

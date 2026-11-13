@@ -43,13 +43,13 @@ Town Pack은 두 게임의 컬렉션에 모두 들어 있어 함께 로드됩니
 
 ## 내 게임에서 배경 쓰기
 
-1. 콘텐츠 모드의 `depends` 목록에 `town_pack>=1`을 추가합니다.
-2. 게임의 컬렉션에 `town_pack>=1`을 추가합니다. My Novel 템플릿이 **Assets** 블록에서 하는 일이 그 예입니다.
+1. 콘텐츠 모드의 `depends` 목록에 `town_pack>=0.1.0`을 추가합니다.
+2. 게임의 컬렉션에 `town_pack>=0.1.0`을 추가합니다. My Novel 템플릿이 **Assets** 블록에서 하는 일이 그 예입니다.
 3. 리소스는 아래 이름으로 참조합니다. 이름은 `backgrounds/`와 `sounds/` 기준 상대경로이며 확장자는 붙이지 않습니다.
 
 ```jsonc
 // mods/my_game/manifest.json — 기존 목록에 추가
-"depends": ["town_pack>=1"]
+"depends": ["town_pack>=0.1.0"]
 ```
 
 템플릿의 `my_novel_bar` 장면에서 가져온, 바를 보여주고 환경음을 트는 장면입니다:
@@ -80,7 +80,7 @@ bar/bar_ambient     sounds/bar/bar_ambient.ogg
 
 ## 내 게임용으로 그림 바꾸기
 
-Town Pack을 고치지 않고 그림을 바꾸려면, 같은 상대경로 이름의 파일(예: `backgrounds/bar/bar.png`)을 자신의 모드에 넣고 그 모드의 `depends`에 `town_pack>=1`을 선언하세요. 소유자에게 의존하는 모드가 나중에 로드되어 이깁니다. 배경을 바꿀 때는 같은 이름의 `_depth` 파일도 함께 넣으세요. 그렇지 않으면 Town Pack의 원래 뎁스 이미지가 그대로 발견되어 빛이 옛 그림의 구도를 따라갑니다.
+Town Pack을 고치지 않고 그림을 바꾸려면, 같은 상대경로 이름의 파일(예: `backgrounds/bar/bar.png`)을 자신의 모드에 넣고 그 모드의 `depends`에 `town_pack>=0.1.0`을 선언하세요. 소유자에게 의존하는 모드가 나중에 로드되어 이깁니다. 배경을 바꿀 때는 같은 이름의 `_depth` 파일도 함께 넣으세요. 그렇지 않으면 Town Pack의 원래 뎁스 이미지가 그대로 발견되어 빛이 옛 그림의 구도를 따라갑니다.
 
 의존성이 없으면 같은 이름을 놓은 두 모드의 순서는 정의되지 않으며, 리소스 맵 도구가 이를 오류로 보고합니다.
 
